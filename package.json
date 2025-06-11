@@ -1,11 +1,14 @@
 {
-  "name": "@artmizu/nuxt-prometheus",
+  "name": "@johnsilver/nuxt-prometheus",
   "type": "module",
-  "version": "2.5.0",
+  "version": "2.5.2",
   "packageManager": "pnpm@9.1.1",
   "description": "Allows you to better understand what's going on with your application and how to optimize performance and other things in production",
   "license": "MIT",
-  "repository": "artmizu/nuxt-prometheus",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnsilver/nuxt-prometheus.git"
+  },
   "publishConfig": {
     "access": "public"
   },
