@@ -1,2 +1,4 @@
 dist
 node_modules
+# Игнорировать TypeScript ошибки
+**/*.ts

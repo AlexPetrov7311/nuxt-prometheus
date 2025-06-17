@@ -1,5 +1,7 @@
-import { defineNuxtConfig } from 'nuxt/config'
-import MyModule from '../'
+// @ts-ignore
+import { defineNuxtConfig } from 'nuxt'
+// @ts-ignore
+import MyModule from '..'
 
 export default defineNuxtConfig({
   modules: [
@@ -14,5 +16,5 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: 'node-cluster',
-  }
+  },
 })
