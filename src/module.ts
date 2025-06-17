@@ -27,6 +27,7 @@ const module: NuxtModule<Partial<AnalyticsModuleParams>> = defineNuxtModule<Part
     healthCheck: true,
     prometheusPath: '/metrics',
     healthCheckPath: '/health',
+    clusterPort: 9000,
   },
   async setup(options, nuxt) {
     const moduleOptions: Partial<AnalyticsModuleParams> = defu(
@@ -53,6 +54,11 @@ const module: NuxtModule<Partial<AnalyticsModuleParams>> = defineNuxtModule<Part
     }
 
     addPlugin({ src: resolve('./runtime/plugin'), mode: 'server' })
+
+    nuxt.hook('nitro:config', (nitroConfig) => {
+      nitroConfig.plugins = nitroConfig.plugins || []
+      nitroConfig.plugins.push(resolve('./runtime/nitro-plugin'))
+    })
   },
 })
 

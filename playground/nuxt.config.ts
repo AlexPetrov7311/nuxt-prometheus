@@ -7,6 +7,12 @@ export default defineNuxtConfig({
   ],
 
   prometheus: {
+    verbose: true,
     prefix: 'playground_',
+    clusterPort: 9100,
   },
+
+  nitro: {
+    preset: 'node-cluster',
+  }
 })

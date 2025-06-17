@@ -42,4 +42,10 @@ export interface AnalyticsModuleParams {
    * @default no prefix
    */
   prefix?: string
+
+  /**
+   * The port to listen for cluster metrics
+   * @default 9000
+   */
+  clusterPort?: number
 }

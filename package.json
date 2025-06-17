@@ -1,11 +1,14 @@
 {
-  "name": "@artmizu/nuxt-prometheus",
+  "name": "@johnsilver/nuxt-prometheus",
   "type": "module",
-  "version": "2.2.1",
-  "packageManager": "pnpm@7.16.1",
+  "version": "2.2.2",
+  "packageManager": "pnpm@10.12.1+sha512.f0dda8580f0ee9481c5c79a1d927b9164f2c478e90992ad268bbb2465a736984391d6333d2c327913578b2804af33474ca554ba29c04a8b13060a717675ae3ac",
   "description": "Allows you to better understand what's going on with your application and how to optimize performance and other things in production",
   "license": "MIT",
-  "repository": "artmizu/nuxt-prometheus",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnsilver/nuxt-prometheus.git"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -21,7 +24,7 @@
     "dist"
   ],
   "engines": {
-    "node": "<=17"
+    "node": ">=16.0.0"
   },
   "scripts": {
     "prepack": "nuxt-module-build",
@@ -40,6 +43,7 @@
     "consola": "^3.2.3",
     "defu": "^6.1.2",
     "h3": "^1.7.1",
+    "nitropack": "^2.11.12",
     "prom-client": "^14.2.0"
   },
   "devDependencies": {
