@@ -8,19 +8,18 @@ import { useRuntimeConfig } from '#imports'
 // @ts-ignore
 import { defineNitroPlugin } from 'nitropack/runtime/plugin'
 
-const aggregatorRegistry = new AggregatorRegistry()
-
 let server: http.Server | null = null
 
 export default defineNitroPlugin((nitroApp: any) => {
   // @ts-ignore
-  if (process.env.NITRO_PRESET !== 'node-cluster') {
+  if (process.env.NITRO_PRESET !== 'node-cluster' || process.env.NITRO_PRESET !== 'node_cluster') {
     return
   }
   const config = useRuntimeConfig()
   const prometheusConfig = config.public.prometheus
 
   if (cluster.isMaster) {
+    const aggregatorRegistry = new AggregatorRegistry()
     if (!server) {
       server = http
         .createServer(async (req: any, res: any) => {
