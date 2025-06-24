@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   modules: [
-    '@artmizu/nuxt-prometheus',
+    '@johnsilver/nuxt-prometheus',
   ],
 
   prometheus: {

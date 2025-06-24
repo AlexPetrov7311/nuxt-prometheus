@@ -1,5 +1,20 @@
 # Changelog
 
+## [2.2.3](https://github.com/johnsilver/nuxt-prometheus/compare/v2.2.2...v2.2.3) (2025-06-23)
+
+### Features
+
+* **NEW:** Added cluster metrics support with `clusterMetrics()` from prom-client
+* **NEW:** Added `clusterPort` configuration option for multi-worker setups
+* **NEW:** Enhanced support for Nuxt 3.9+ with node-cluster preset
+* **NEW:** Fork from original @artmizu/nuxt-prometheus with cluster enhancements
+
+### Documentation
+
+* Updated README with cluster mode setup instructions
+* Added production deployment command examples
+* Documented new `clusterPort` configuration option
+
 ## [2.5.0](https://github.com/artmizu/nuxt-prometheus/compare/v2.4.2...v2.5.0) (2025-04-10)
 
 
